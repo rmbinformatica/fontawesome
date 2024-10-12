@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Renato Monteiro Batista">
+    <title>Formulário Seletor de Ícones do FontAwesome</title>
+    <!-- Incluir FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <!-- Incluir IconPicker CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fontawesome-iconpicker/3.2.0/css/fontawesome-iconpicker.min.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+        }
+        .form-group {
+            margin-bottom: 15px;
+        }
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+        }
+        .form-group input {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        .fa-lg {
+            font-size: 2em !important; /* Ajuste o tamanho conforme necessário */
+         }
+    </style>
+</head>
+<body>
+    <h1>Formulário seletor de ícones do FontAwesome</h1>
+    Esse é um exemplo de um campo de formulário para seleção de ícones do conjunto de ícones <a href="https://fontawesome.com">FontAwesome</a>.
+    <form>
+        <div class="form-group">
+            <label for="iconPicker">Escolha um ícone:</label>
+            <input type="text" id="iconPicker" class="form-control" />
+        </div>
+        <button type="submit">Enviar</button>
+    </form>
+
+    <!-- Incluir jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <!-- Incluir IconPicker JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fontawesome-iconpicker/3.2.0/js/fontawesome-iconpicker.min.js"></script>
+    <script>
+        $(document).ready(function() {
+            $('#iconPicker').iconpicker();
+        });
+        $('#iconPicker').iconpicker({
+            templates: {
+               iconpickerItem: '<a role="button" href="#" class="iconpicker-item"><i class="fa-lg"></i></a>'
+            }
+        });
+    </script>
+    <hr size="1">
+      <p align="center">Desenvolvido em 2024 por <a href="https://renato.ovh" target="_blank">Renato Monteiro Batista</a>.</p>
+</body>
+</html>
